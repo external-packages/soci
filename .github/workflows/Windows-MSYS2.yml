@@ -47,7 +47,7 @@ jobs:
           mingw-w64-${{matrix.env}}-ninja
           mingw-w64-${{matrix.env}}-libmariadbclient
           mingw-w64-${{matrix.env}}-postgresql
-          mingw-w64-firebird2-git
+          mingw-w64-${{matrix.env}}-firebird2-git
 
     - name: '🔧 Configure'
       run: cmake -S . -B ${{ env.CMAKE_BUILD_PREFIX }} -D CMAKE_BUILD_TYPE=${{ env.CMAKE_BUILD_TYPE }}
