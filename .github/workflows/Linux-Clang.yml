@@ -34,7 +34,7 @@ jobs:
         github-api-token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: '${{ matrix.icon }} Install packages'
-      run: sudo apt-get install mysql-client
+      run: sudo apt-get install mysql-client firebird3.0 postgresql
 
     - name: '🔧 Configure'
       env:
