@@ -10,7 +10,7 @@
 ###############################################################################
 # General settings
 ###############################################################################
-cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.16)
 
 project(SOCI)
 
@@ -26,8 +26,6 @@ option(SOCI_LTO "Enable link time optimization" OFF)
 option(SOCI_VISIBILITY "Enable hiding private symbol using ELF visibility if supported by the platform" ON)
 
 if (SOCI_LTO)
-    cmake_minimum_required(VERSION 3.9)
-
     # Check and enable lto support
     include(CheckIPOSupported)
     check_ipo_supported(RESULT supported)
